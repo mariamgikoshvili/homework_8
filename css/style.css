@@ -1,0 +1,200 @@
+.main_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
+}
+
+/* task 1 */
+
+button{
+    width: 400px;
+    height: 100px;
+    background-color: rgb(255, 192, 245);
+    display: block;
+    margin: 50px 0;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    letter-spacing: 5px;
+    text-shadow: 3px 3px 3px black;
+    cursor: pointer;
+    box-shadow: 
+        inset 3px 4px 4px white,
+        3px 4px 4px black;
+
+
+        /* 3px 3px 4px white inset; */
+    transition: box-shadow, text-shadow;
+
+}
+
+button:active{
+    box-shadow:  
+        inset 3px 4px 4px black,
+        inset -3px -4px 4px white
+    ;
+    text-shadow: 1px 1px 3px black;;
+}
+
+
+/* task 2 */
+
+.article_1{
+    width: 280px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    transition: border-radius, box-shadow;
+}
+
+.article_img{
+    width: 100%;
+    transition: border-radius;
+}
+
+h2{
+    font-size: 18px;
+    color: green;
+}
+
+article:hover{
+    border-radius: 10px;
+    box-shadow: 
+        0 0 5px green,
+        0 0 10px green,
+        0 0 20px green;
+}
+
+article:hover .article_img{
+    border-radius: 10px 10px 0 0 ;
+}
+
+/* task 3 */
+
+.text{
+    font-size: 140px;
+    color: red;
+    letter-spacing: 20px;
+    opacity: 1;
+    animation: visibl 0.5s infinite;
+}
+
+@keyframes visibl {
+    from
+    { 
+        opacity: 0}
+    
+    to{
+        opacity: 1;
+    }
+}
+
+/* task 4 */
+
+.container{
+    width: 400px;
+    height: 400px;
+    position: relative;
+    /* background-color: aqua; */
+}
+
+.circle{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-bottom: 50px solid green;
+    border-right: 50px solid green;
+    border-left: 50px solid yellow;
+    border-top: 50px solid red;
+    animation: rotate 2s linear infinite;
+    position: absolute;
+
+}
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }   
+}
+
+.circle_text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: green;
+    
+}
+
+.circle:hover{
+    animation-play-state: paused;
+}
+
+
+/* task 5 */
+
+.header{
+    background-color: rgb(7, 109, 94);
+    width: 1440px;
+    display: flex;
+    padding: 20px 0;
+    justify-content: center;
+}
+
+.header_ul{
+    display: flex;
+    gap: 50px;
+}
+
+.header_nav_p{
+    font-size: 40px;
+    color: floralwhite;
+    text-shadow: 2px 2px 2px black;
+    transition: text-shadow;
+    
+    transition-duration: 1s;
+}
+
+.header_nav_p:hover{
+    text-shadow: 
+        0 0 5px rgb(170, 91, 203),
+        0 0 20px rgb(170, 91, 203),
+        0 0 60px rgb(170, 91, 203),
+        0 0 160px rgb(170, 91, 203); 
+}
+
+/* task 6 */
+
+.container_2{
+    width: 700px;
+    height: 50px;
+    background-color: rgba(207, 207, 207, 0.867);
+}
+
+
+.bar{
+    width: 100%;
+    height: 100%;
+    border: 1px black solid;
+    background-color: rgb(70, 167, 242);
+    animation: load 5s linear;
+    
+}
+
+@keyframes load{
+    from{
+        width: 0%
+    }
+    to{
+        width: 100%
+    }
+}
